@@ -1,8 +1,8 @@
 ### Oii, eu sou a Fran! 🤠
 
 
-- 🔭 Estou atualmente trabalhando com front-end.
-- 🌱 Estou atualmente estudando Javascript, Python e SQL.
+- 🔭 Eu sou uma desenvolvedora de full stack.
+- 🌱 Estou atualmente estudando Javascript, Python, SQL entre outras coisas.
 - 😄 Pronomes: Ela/dela
 
 <div style="display: inline_block"><br>
