@@ -1,0 +1,43 @@
+import json
+
+# Função para calcular e exibir os dados de faturamento
+def calcular_faturamento(dias_com_faturamento):
+    """Calcula e exibe o menor, maior e a média de faturamento, além do número de dias com faturamento superior à média."""
+    if not dias_com_faturamento:
+        print("Lista de faturamento está vazia.")
+        return
+
+    # Menor e maior valor de faturamento
+    menor_faturamento = min(dias_com_faturamento)
+    maior_faturamento = max(dias_com_faturamento)
+    
+    # Média de faturamento
+    media_faturamento = sum(dias_com_faturamento) / len(dias_com_faturamento)
+    
+    # Número de dias com faturamento superior à média
+    dias_superior_media = len([faturamento for faturamento in dias_com_faturamento if faturamento > media_faturamento])
+    
+    print(f"Menor faturamento: {menor_faturamento}")
+    print(f"Maior faturamento: {maior_faturamento}")
+    print(f"Média de faturamento: {media_faturamento:.2f}")
+    print(f"Dias com faturamento superior à média: {dias_superior_media}")
+
+# Função para carregar dados de um arquivo JSON
+def carregar_dados(fonte_json):
+    try:
+        with open(fonte_json, 'r') as file:
+            dados = json.load(file)
+        return dados
+    except FileNotFoundError:
+        print(f"Arquivo {fonte_json} não encontrado.")
+        return None
+    except json.JSONDecodeError:
+        print("Erro ao decodificar o arquivo JSON.")
+        return None
+
+# Exemplo de uso
+if __name__ == "__main__":
+    dados = carregar_dados('faturamento.json')
+    if dados:
+        dias_com_faturamento = dados.get('dias_com_faturamento', [])
+        calcular_faturamento(dias_com_faturamento)
