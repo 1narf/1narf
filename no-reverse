@@ -1,0 +1,19 @@
+# Função para inverter a string
+def inverter_string(s):
+    # Criar uma nova string invertida
+    string_invertida = ""
+    
+    # Percorrer a string de trás para frente
+    for i in range(len(s) - 1, -1, -1):
+        string_invertida += s[i]
+    
+    return string_invertida
+
+# Entrada da string (você pode modificar ou receber via input)
+string_original = input("Digite a string para inverter: ")
+
+# Chamada da função para inverter
+resultado = inverter_string(string_original)
+
+# Exibir o resultado
+print("String invertida:", resultado)
