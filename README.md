@@ -2,7 +2,7 @@
 
 
 - 🔭 Eu sou uma desenvolvedora de front-end.
-- 🌱 Estou atualmente estudando Cybersegurança, IA, React, SQL entre outras coisas.
+- 🌱 Estou atualmente estudando Javascript, Typescript, React, SQL entre outras coisas.
 - 😄 Pronomes: Ela/dela
 
 <div style="display: inline_block"><br>
